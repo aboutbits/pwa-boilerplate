@@ -4,7 +4,8 @@ import { RegisterServiceWorker } from './RegisterServiceWorker';
 
 function App() {
   return (
-    <RegisterServiceWorker>
+    <>
+      <RegisterServiceWorker />
       <div className="App">
         <header className="App-header">
           <p>
@@ -15,7 +16,7 @@ function App() {
           </p>
         </header>
       </div>
-    </RegisterServiceWorker>
+    </>
   );
 }
 
