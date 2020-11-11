@@ -24,4 +24,4 @@ deploy:
  only:
    - master
  script:
-   - docker-compose run --rm -T node npm run deploy:test -- --scope=${VERCEL_SCOPE} --token=${VERCEL_TOKEN}
+   - docker-compose run --rm -T node npm run deploy -- --scope=${VERCEL_SCOPE} --token=${VERCEL_TOKEN}
