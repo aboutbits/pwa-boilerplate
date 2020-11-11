@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { AlertDialog, AlertDialogLabel, AlertDialogDescription } from '@reach/alert-dialog'
-import "@reach/alert-dialog/styles.css";
+import "@reach/dialog/styles.css";
 
 import * as serviceWorker from './serviceWorkerRegistration'
 
