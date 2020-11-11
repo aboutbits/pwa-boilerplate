@@ -38,22 +38,8 @@ docker-compose up --detach
 
 ## Development
 
-For linting the source files, execute the following command:
-
-```bash
-docker-compose run --rm node npm run lint
-
-# or
-
-docker-compose run --rm node npm run lint:fix
-```
-
 For running the tests, execute the following command:
 
 ```bash
 docker-compose run --rm node npm run test
-
-#or
-
-docker-compose run --rm node npm run test:watch
 ```
