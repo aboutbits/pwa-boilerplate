@@ -13,7 +13,7 @@ ReactDOM.render(
 
 serviceWorker.register({
   onUpdate: (registration) => {
-    console.log('SKIP Waiting!!!')
     registration.waiting?.postMessage({type: 'SKIP_WAITING'})
+    window.location.reload()
   }
 })
