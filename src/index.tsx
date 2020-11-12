@@ -11,4 +11,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorker.register()
+serviceWorker.register({
+  onUpdate: (registration) => {
+    registration.waiting?.postMessage({type: 'SKIP_WAITING'})
+  }
+})
