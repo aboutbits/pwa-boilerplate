@@ -52,6 +52,7 @@ export function register(config?: Config) {
       } else {
         // Is not localhost. Just register service worker
         registerValidSW(swUrl, config);
+        addListenerToForceReloadAllTabs();
       }
     });
   }
@@ -133,6 +134,19 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
     .catch(() => {
       console.log('No internet connection found. App is running in offline mode.');
     });
+}
+
+function addListenerToForceReloadAllTabs() {
+  let refreshing = false; 
+  console.log('Add event listener', 'controllerchange')
+
+  // detect controller change and refresh the page
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!refreshing) {
+          window.location.reload()
+          refreshing = true
+      }
+  })
 }
 
 export function unregister() {
