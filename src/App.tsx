@@ -11,7 +11,7 @@ function App() {
             Boilerplate - PWA
           </p>
           <p>
-            Version 17
+            Version 18
           </p>
         </header>
       </div>
