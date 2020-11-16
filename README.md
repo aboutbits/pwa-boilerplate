@@ -43,3 +43,5 @@ For running the tests, execute the following command:
 ```bash
 docker-compose run --rm node npm run test
 ```
+
+## How does it work?

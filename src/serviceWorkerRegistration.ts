@@ -64,7 +64,6 @@ function registerValidSW(swUrl: string, config?: Config) {
     .then((registration) => {
 
       setInterval(() => {
-        console.log("Try to update service worker!")
         registration.update()
       }, 60 * 60 * 1000)
 
@@ -137,8 +136,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
 }
 
 function addListenerToForceReloadAllTabs() {
-  let refreshing = false; 
-  console.log('Add event listener', 'controllerchange')
+  let refreshing = false;
 
   // detect controller change and refresh the page
   navigator.serviceWorker.addEventListener('controllerchange', () => {
