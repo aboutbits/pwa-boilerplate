@@ -68,6 +68,6 @@ Configure `vercel.json` to respond with `Clear-Site-Data` header on `service-wor
 
 ```
 "routes": [
-        { "src": "/service-worker.js", "headers": { "Clear-Site-Data": "cache, cookies, storage, executionContexts" }, "dest": "/service-worker.js"}
-]
+        { "src": "/service-worker.js", "headers": { "Clear-Site-Data": "\"cache\", \"cookies\", \"storage\", \"executionContexts\"" }, "dest": "/service-worker.js"}
+    ]
 ```
