@@ -45,3 +45,14 @@ docker-compose run --rm node npm run test
 ```
 
 ## How does it work?
+
+
+## Emerengy: How can we unregister a broken service-worker?
+
+```
+cp service-worker-noop.js service-worker.js
+rm service-worker.ts
+```
+
+We will create a new service-worker that unregisters itself. Once we fix the bug we can than reneable the old service-worker removing `service-worker.js` again.
+
