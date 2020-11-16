@@ -1,10 +1,8 @@
 /// <reference lib="webworker" />
 /* eslint-disable no-restricted-globals */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import * as WorkboxCore from 'workbox-core';
-
-declare const self: ServiceWorkerGlobalScope;
+// eslint-disable-next-line no-unused-vars
+const ignored = self.__WB_MANIFEST;
 
 self.addEventListener('install', () => self.skipWaiting());
 
@@ -23,7 +21,7 @@ async function burnDownTheHouse() {
   clients.forEach((client) => {
 
     if ('navigate' in client) {
-      (client as WindowClient).navigate((client as Client).url)
+      client.navigate(client.url)
     }
   })
 }
