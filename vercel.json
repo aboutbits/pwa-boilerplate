@@ -1,4 +1,7 @@
 {
     "name": "pwa-boilerplate",
-    "version": 2
+    "version": 2,
+    "routes": [
+        { "src": "/service-worker.js", "headers": { "Clear-Site-Data": "cache, cookies, storage, executionContexts" }, "dest": "/service-worker.js"}
+    ]
 }
