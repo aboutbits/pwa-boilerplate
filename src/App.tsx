@@ -4,7 +4,6 @@ import './App.css';
 function App() {
   return (
     <>
-      {/* <RegisterServiceWorker /> */}
       <div className="App">
         <header className="App-header">
           <p>
