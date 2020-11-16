@@ -15,10 +15,8 @@ async function burnDownTheHouse() {
   self.registration.unregister();
   // Delete all caches
   const keys = await self.caches.keys();
-  console.log('keys', keys)
   await Promise.all(keys.map(key => self.caches.delete(key)));
   // Force refresh all windows
-  console.log('force refresh all windows')
   const clients = await self.clients.matchAll({ type: 'window' });
   clients.forEach((client) => {
     if ('navigate' in client) {
