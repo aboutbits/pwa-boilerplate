@@ -27,7 +27,26 @@ If the service-worker has no changes, than nothing will happen, if there are cha
 
 ### Service-Worker update lifecyle
 
+1. **Install**: A new service-worker.js file was downloaded and is different to the current one. Now the browser will try to install it. The old one still remains the active service-worker that serves the currently open apps. The new service-worker goes into a waiting state.
+2. **Waiting**: Unless all tabs are closed the new service-worker remains in this state, to prevent one tab being served by one service-worker and another tab by another service-worker. `self.skipWaiting()` prevents this behaviour and immeditately activates the new service worker. 
+3. **Active**: Even though the new service-worker is active, unless a user refreshes the page, we will still see the old content, because the website never requested a new HTML. Therefore we have to reload the page and all tabs programmatically. The following piece of code makes sure that this happens:
 
+```js
+let refreshing = false;
+
+// detect controller change and refresh the page
+navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!refreshing) {
+        window.location.reload()
+        refreshing = true
+    }
+})
+```
+
+Great resources for more details:
+
+- [Lifecycles](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#scope_and_control)
+- [Update strategies](https://redfin.engineering/how-to-fix-the-refresh-button-when-using-service-workers-a8e27af6df68)
 
 ## Emergency
 
