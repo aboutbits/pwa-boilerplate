@@ -5,6 +5,7 @@
 1. [Prerequisites](#prerequisites)
 2. [Setup](#setup)
 3. [Development](#development)
+4. [Service Wokers](/service-worker.md)
 
 ## Prerequisites
 
@@ -42,34 +43,4 @@ For running the tests, execute the following command:
 
 ```bash
 docker-compose run --rm node npm run test
-```
-
-## PWA: Update strategy
-
-
-
-## Emerengy: How can we unregister a broken service-worker?
-
-More details on emergency strategies can be found here:
-- https://stackoverflow.com/questions/33986976/how-can-i-remove-a-buggy-service-worker-or-implement-a-kill-switch/38980776#38980776
-
-
-```
-cp service-worker-noop.js service-worker.js
-rm service-worker.ts
-```
-
-We will create a new service-worker that unregisters itself. Once we fix the bug we can than reneable the old service-worker removing `service-worker.js` again.
-
-
-## Emergency: Kill switch?
-
-Configure `vercel.json` to respond with `Clear-Site-Data` header on `service-worker.js` request. 
-This will clear the browser data.
-Every browser will by default request this endpoint every 24h.
-
-```
-"routes": [
-        { "src": "/service-worker.js", "headers": { "Clear-Site-Data": "\"cache\", \"cookies\", \"storage\", \"executionContexts\"" }, "dest": "/service-worker.js"}
-    ]
 ```
