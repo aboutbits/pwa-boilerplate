@@ -1,8 +1,6 @@
 # Service Worker
 
-This project is based on Create React App v4, with service-workers enabled. For more details about Create React App and PWAs please go the documentation.
-
-- https://create-react-app.dev/docs/making-a-progressive-web-app/
+This project is based on Create React App v4, with service-workers enabled. For more details about Create React App and PWAs please go to the [documentation](https://create-react-app.dev/docs/making-a-progressive-web-app/).
 
 ## Table of Content
 
@@ -19,10 +17,7 @@ Currently the app will look for updates every 60 Minutes. The default behaviour 
 
 - https://stackoverflow.com/questions/38843970/service-worker-javascript-update-frequency-every-24-hours
 
-The code responsible for the periodic 60 Minutes check lives here:
-
-https://gitlab.com/aboutbits/pwa-boilerplate/-/blob/master/src/serviceWorkerRegistration.ts#L55
-
+The code responsible for the periodic 60 Minutes check lives [here](https://gitlab.com/aboutbits/pwa-boilerplate/-/blob/master/src/serviceWorkerRegistration.ts#L66-68).
 If the service-worker has no changes, than nothing will happen, if there are changes than the service-worker update lifecylce kicks in.
 
 ### Service-Worker update lifecyle
@@ -42,6 +37,8 @@ navigator.serviceWorker.addEventListener('controllerchange', () => {
     }
 })
 ```
+
+In our example you can find it [here](https://gitlab.com/aboutbits/pwa-boilerplate/-/blob/master/src/serviceWorkerRegistration.ts#L55).
 
 Great resources for more details:
 
