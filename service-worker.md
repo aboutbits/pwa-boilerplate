@@ -11,7 +11,7 @@ This project is based on Create React App v4, with service-workers enabled. For 
 
 ## Update Strategy
 
-This example shows a very aggressive update strategy. Whenever we push a new version of our app we will try to upgrade as soon as possible and force update all open tabs.
+This example shows a very aggressive update strategy. Whenever we push a new version of our app we will try to upgrade as soon as possible and force update all open tabs. We don't show a popup, but refresh the page without asking the user. This could be dangerous for applications, that have a lots of long forms.
 
 ### Refresh service-worker every 60 minutes
 
