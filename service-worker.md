@@ -29,7 +29,7 @@ If the service-worker has no changes, than nothing will happen, if there are cha
 
 
 
-## Emerengy
+## Emergency
 
 What can we do if we delivered a broken service-worker.
 
