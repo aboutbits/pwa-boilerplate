@@ -1,6 +1,7 @@
 /// <reference lib="webworker" />
 /* eslint-disable no-restricted-globals */
 
+// This line is required by Create React App Webpack configuration, but it has no effect in this case.
 // eslint-disable-next-line no-unused-vars
 const ignored = self.__WB_MANIFEST;
 

@@ -64,7 +64,9 @@ We will create a new service-worker that unregisters itself. Once we fix the bug
 
 ## Emergency: Kill switch?
 
-Configure `vercel.json` to respond with `Clear-Site-Data` header on `service-worker.js` request. This will clear the browser data. Every browser will by default request this endpoint every 24h.
+Configure `vercel.json` to respond with `Clear-Site-Data` header on `service-worker.js` request. 
+This will clear the browser data.
+Every browser will by default request this endpoint every 24h.
 
 ```
 "routes": [
