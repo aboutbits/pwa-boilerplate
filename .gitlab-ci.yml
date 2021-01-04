@@ -17,7 +17,7 @@ before_script:
 setup:
   stage: setup
   script:
-    - docker-compose run --rm -T node npm install
+    - docker-compose run --rm -T node npm ci
 
 deploy:
  stage: deploy
