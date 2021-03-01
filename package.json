@@ -14,7 +14,7 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
     "typescript": "^4.0.5",
-    "vercel": "^20.1.2",
+    "vercel": "^21.2.2",
     "workbox-background-sync": "^5.1.4",
     "workbox-broadcast-update": "^5.1.4",
     "workbox-cacheable-response": "^5.1.4",
@@ -33,7 +33,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "vercel deploy --local-config=vercel.json --prod --confirm"
+    "deploy": "vercel deploy --local-config=vercel.json --prod"
   },
   "eslintConfig": {
     "extends": [
