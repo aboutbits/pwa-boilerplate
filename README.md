@@ -20,11 +20,6 @@ Install all dependencies by executing the following command:
 docker-compose run --rm node npm install
 ```
 
-Point the domain in your `/etc/hosts` file to your localhost:
-
-```
-127.0.0.1 web.aboutbits.local
-```
 
 To start the Docker containers, execute one of the following commands:
 
