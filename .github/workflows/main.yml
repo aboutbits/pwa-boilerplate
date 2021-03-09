@@ -2,6 +2,8 @@ name: Test & Deploy
 
 env:
   VERCEL_SCOPE: aboutbits
+  VERCEL_ORG_ID: team_e2WfHoRuw9BQVW7oYmMSKRJ6
+  VERCEL_PROJECT_ID: QmUjPuMns61pchVfDbnB1CXEve6NEdwr4n55zNViU6vST9
 
 on: push
 
@@ -47,6 +49,6 @@ jobs:
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-args: --prod
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-org-id: ${{ env.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ env.VERCEL_PROJECT_ID }}
           scope: ${{ env.VERCEL_SCOPE }}
