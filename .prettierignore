@@ -1,0 +1,4 @@
+yarn.json
+.next
+node_modules/
+out
