@@ -1,4 +1,2 @@
-yarn.json
-.next
+build
 node_modules/
-out
