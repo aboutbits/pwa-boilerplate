@@ -9,7 +9,7 @@ on: push
 
 jobs:
   setup:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -24,7 +24,7 @@ jobs:
       - run: npm run test -- --passWithNoTests
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: [setup]
     steps:
       - uses: actions/checkout@v2
@@ -40,7 +40,7 @@ jobs:
       - run: npm run test -- --passWithNoTests
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: [test]
     if: github.ref == 'refs/heads/main'
     steps:
